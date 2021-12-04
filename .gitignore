@@ -1,5 +1,5 @@
+#build folder
+dist
+
 # node dependencies
 node_modules
-
-#build folder
-.dist
