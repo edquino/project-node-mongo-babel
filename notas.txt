@@ -1,0 +1,52 @@
+*Despues de la instalacion de @babel 
+*crear fichero "babelrc" y agregar la Configuracion
+{
+    "presets": [
+        "@babel/preset-env"
+    ]
+}
+
+* Comando para iniciar proyecto antes de 
+* instalar el paquete nodemon:
+
+"start": "babel-node src/index.js"
+
+*Configuracion en el fichero "package.json" que sirve para construir 
+*la carpeta "dist" para subir proyecto a produccion
+*por la utilizacion de babel.
+
+"build": "babel src -d dist"
+
+*ejecucion de comando para crear la carpeta dist
+*y pueda ser interpretado con codigo node js
+
+npm run build
+
+*Comando que instala el paquete "@babel/plugin" para 
+*solucionar el problema de: "regeneratorRuntime is not defined"
+*para que funciona en produccion
+npm install --save-dev @babel/plugin-transform-runtime
+
+*Luego de la instalacion ejecutar en comando
+
+
+*Agregar al fichero de ".babelrc" la siguiente
+*Configuracion
+{
+    "presets": [
+        "@babel/preset-env"
+    ],
+    "plugins": [
+        "@babel/plugin-transform-runtime"
+    ]
+}
+
+**comando que permite hacer copias de directorios
+o carpetas 
+npm i ncp
+
+*Configuracion en el fichero "package.json" que
+*permite copiar la carpeta views en el directorio
+*dist
+
+"babel src -d dist && ncp src/views dist/views"

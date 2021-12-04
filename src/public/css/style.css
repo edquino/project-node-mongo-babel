@@ -1,0 +1,48 @@
+body{
+    background-color: #CCD1D1;
+}
+
+.content-buttons-task {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
+
+.buttons-task {
+    width: 30%;
+    height: 100%;
+    color: white;
+    margin: auto;
+    transition: 1s;
+}
+
+.buttons-task:nth-child(1){
+    background-color: #28a745;
+}
+
+.buttons-task:nth-child(2){
+    background-color: #007bff;
+    cursor: pointer;
+}
+
+.buttons-task:nth-child(3){
+    background-color: #dc3545;
+}
+
+.text-button{
+    color: white;
+    text-decoration: none;
+}
+
+.buttons-task:hover a{
+    color: white;
+    text-decoration: none; 
+    cursor: pointer;
+}
+
+
+.buttons-task:hover {
+    background-color: black;
+    text-decoration: none; 
+    cursor: pointer;
+}

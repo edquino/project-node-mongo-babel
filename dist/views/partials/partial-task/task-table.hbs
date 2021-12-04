@@ -1,0 +1,41 @@
+<div class="container">
+    {{#if tasks}}
+    <div class="row">
+        {{#each tasks}}
+        {{!-- <div class="col-6"> --}}
+            <div class="card text-center bg-dark text-white mb-3 mr-4 ml-4 rounded-2" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">{{title}}</h5>
+                    <p class="card-text">{{description}}</p>
+                    <div class="content-buttons-task">
+                        {{#if done}}
+                        <div class="buttons-task" style="background-color:#6c757d">
+                            <a class="text-button" href="/task/state/{{_id}}">Completa</a>
+                        </div>
+                        {{else}}
+                        <div class="buttons-task" style="background-color:#28a745">
+                            <a class="text-button" href="/task/state/{{_id}}">Pediente</a>
+                        </div>
+                        {{/if}}
+                        <div class="buttons-task">
+                            <a class="text-button" href="/task/edit/{{_id}}">Editar</a>
+                        </div>
+                        <div class="buttons-task">
+                            <a class="text-button" href="/task/delete/{{_id}}">Eliminar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{!--
+        </div> --}}
+        {{/each}}
+    </div>
+    {{else}}
+    <div class="row">
+        <div class=" col-md-4 text-center text-black mx-auto rounded-2">
+            <h5 class="card-title">Sin Tareas</h5>
+            <img class="w-75 text-withe" src="/img/empty.svg" alt="">
+        </div>
+    </div>
+    {{/if}}
+</div>
